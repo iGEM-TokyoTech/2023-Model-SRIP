@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  SRIP_model:
+    build: .
+    image: jupyterlab-test-img
+    container_name: SRIP_model
+    working_dir: /notebooks
+    volumes:
+      - ./:/notebooks
+      - ./:/data
+    ports:
+      - "8888:8888"
+    command:
+      jupyter-lab --ip 0.0.0.0 --allow-root -b localhost --LabApp.token=''
