@@ -1,3 +1,4 @@
 *.csv
 temp-*
 .DS_Store
+*.ttf
